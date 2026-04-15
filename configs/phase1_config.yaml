@@ -1,0 +1,24 @@
+tickers:
+  - "AAPL, MSFT, GOOGL, AMZN, NVDA, META, TSLA, JPM, GS, BAC"
+  - "XOM, CVX, LLY, JNJ, UNH, WMT, PG, KO, PEP, MCD"
+  - "SPY, QQQ, IWM, GLD, TLT, USO, VNQ, HYG, EEM, DIA"
+
+date_range:
+  start: "2019-01-01"
+  end: "2024-12-31"
+
+macro_series:
+  - DGS10      # 10-year Treasury yield
+  - VIXCLS     # VIX
+  - CPIAUCSL   # CPI (monthly, forward-filled to business day)
+  - UNRATE     # Unemployment rate (monthly, forward-filled)
+  - FEDFUNDS   # Fed funds rate
+
+raw_data_path: "data/raw"
+processed_data_path: "data/processed"
+feature_store_path: "data/features"
+
+feature_windows: [5, 10, 20, 60]
+rsi_period: 14
+atr_period: 14
+volume_ma_period: 20
