@@ -1,0 +1,45 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Data — raw and processed data is not version-controlled
+data/raw/
+data/processed/
+data/features/
+
+# Model artefacts
+models/
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Airflow
+airflow.db
+airflow.cfg
+airflow-webserver.pid
+logs/
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/*.ipynb
+
+# Environment variables (FRED API key etc.)
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
