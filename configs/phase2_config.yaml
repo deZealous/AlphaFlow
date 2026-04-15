@@ -1,0 +1,63 @@
+tickers:
+  - "AAPL, MSFT, GOOGL, AMZN, NVDA, META, TSLA, JPM, GS, BAC"
+  - "XOM, CVX, LLY, JNJ, UNH, WMT, PG, KO, PEP, MCD"
+
+ticker_to_company:
+  AAPL: "Apple"
+  MSFT: "Microsoft"
+  GOOGL: "Google Alphabet"
+  AMZN: "Amazon"
+  NVDA: "NVIDIA"
+  META: "Meta Facebook"
+  TSLA: "Tesla"
+  JPM: "JPMorgan Chase"
+  GS: "Goldman Sachs"
+  BAC: "Bank of America"
+  XOM: "ExxonMobil"
+  CVX: "Chevron"
+  LLY: "Eli Lilly"
+  JNJ: "Johnson Johnson"
+  UNH: "UnitedHealth"
+  WMT: "Walmart"
+  PG: "Procter Gamble"
+  KO: "Coca-Cola"
+  PEP: "PepsiCo"
+  MCD: "McDonald's"
+
+ticker_to_cik:
+  AAPL: "0000320193"
+  MSFT: "0000789019"
+  GOOGL: "0001652044"
+  AMZN: "0001018724"
+  NVDA: "0001045810"
+  META: "0001326801"
+  TSLA: "0001318605"
+  JPM: "0000019617"
+  GS: "0000886982"
+  BAC: "0000070858"
+  XOM: "0000034088"
+  CVX: "0000093410"
+  LLY: "0000059478"
+  JNJ: "0000200406"
+  UNH: "0000731766"
+  WMT: "0000104169"
+  PG: "0000080424"
+  KO: "0000021344"
+  PEP: "0000077476"
+  MCD: "0000063908"
+
+date_range:
+  start: "2019-01-01"
+  end:   "2024-12-31"
+
+finbert_model: "ProsusAI/finbert"
+spacy_model:   "en_core_web_sm"
+
+# EDGAR: cap filings per company to control scrape time on first run
+edgar_filings_cap: 20
+# Alignment: forward-fill NLP features at most this many trading days
+# before falling back to 0 (neutral). Beyond 5 days, sentiment is stale.
+sentiment_ffill_limit: 5
+
+raw_nlp_path:      "data/raw/nlp"
+feature_store_path: "data/features"
